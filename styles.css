@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #282c34;
+    background-color: #1c2025;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -11,58 +11,66 @@ body {
 
 h1 {
     color: #61dafb;
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 25px;
 }
 
 .input-container {
     display: flex;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
 #todo-input {
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px;
     border: 2px solid #61dafb;
-    border-radius: 25px;
-    color: #282c34;
+    border-radius: 15px;
+    color: #1c2025;
     background-color: #ffffff;
     outline: none;
-    width: 250px;
+    width: 270px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#todo-input:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
 }
 
 #add-button {
-    padding: 10px 20px;
-    margin-right: 10px;
+    padding: 12px 24px;
     background-color: #61dafb;
-    color: #282c34;
+    color: #1c2025;
     border: 2px solid #61dafb;
-    border-radius: 25px;
+    border-radius: 15px;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
 
 #add-button:hover {
     background-color: #ffffff;
     color: #61dafb;
+    transform: scale(1.05);
 }
 
 #todo-list {
     list-style-type: none;
     padding: 0;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
 }
 
 .todo-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #3a3f47;
-    border-radius: 25px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #2d333b;
+    border-radius: 15px;
+    transition: background-color 0.3s;
 }
 
 .todo-item.completed {
@@ -75,13 +83,14 @@ h1 {
     background-color: #e53935;
     color: #ffffff;
     border: none;
-    padding: 5px 10px;
-    border-radius: 25px;
+    padding: 6px 12px;
+    border-radius: 15px;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .delete-button:hover {
     background-color: #c62828;
+    transform: scale(1.1);
 }
